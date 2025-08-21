@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashRouter } from "react-router-dom"; // ✅ Import HashRouter
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,14 +12,17 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    // ✅ Wrap everything in HashRouter
+    <HashRouter>
+      <div className={darkMode ? "dark" : ""}>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </HashRouter>
   );
 }
 
