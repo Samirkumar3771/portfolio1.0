@@ -12,7 +12,7 @@ function Home() {
           transition={{ duration: 1 }}
           className="home-text"
         >
-          <h1>👋 Hi, I'm <span className="highlight">Gunjan</span></h1>
+          <h1>👋 Hi, I'm <span className="highlight">Gunjan </span></h1>
           <h2>Aspiring <span className="highlight">Full-Stack Developer</span></h2>
           <p>
             Passionate about building modern web apps, solving problems,
